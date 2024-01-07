@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playstation Store</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+        }
+
+        .logo {
+            border: 1px solid #000000;
+            padding: 5px;
+            height: 45px;
+            width: 45px;
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+            margin-right: auto;
+        }
+        li, a {
+            font-size: 16px;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 3px;
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 30px 16%;
+        }
+
+        .navlinks {
+            list-style-type: none;
+        }
+
+        .navlinks li {
+            display: inline-block;
+            padding: 0px 20px;
+        }
+
+        .navlinks li a {
+            transition: all 0.3s ease 0s;
+        }
+
+        .navlinks li a:hover {
+            color: #003791;
+        }
+
+        .psbanner {
+            border: 1px solid #000000;
+            width: 100%;
+            height: 470px;
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+        }
+
+        .banner-heading {
+            position: relative;
+            color: #ffffff;
+            text-align: center;
+            align-items: center;
+            top: -300px;
+            overflow: hidden;
+            opacity: 0.6;
+            letter-spacing: 7px;
+            transition: all 0.3s ease 0s;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .banner-heading:hover {
+            color: #003791;
+        }
+
+        .description {
+            padding: 25px 40px;
+            text-align: center;
+            border: 1px solid #ffffff;
+            background-color: #ffffff;
+            color: #000000;
+            position: relative;
+            top: -33px;
+        }
+
+        .description h1 {
+            padding: 10px;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+        }
+
+        .description h1:hover {
+            color: #003791;
+        }
+
+        .games {
+            padding: 25px 40px;
+            color: #000000;
+            background-color: #ffffff;
+            text-align: center;
+            position: relative;
+            top: -23px;
+            margin-bottom: 10px;
+        }
+
+        .games h1 {
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+        }
+
+        .games h1:hover {
+            color: #003791;
+        }
+
+        .game1 {
+            position: relative;
+            border: 1px solid #ffffff;
+            border-radius: 6px;
+            background-color: #ffffff;
+            width: 550px;
+            padding: 10px 10px;
+            left: 80px;
+            color: #000000;
+        }
+
+        .gowlogo {
+            border: 0px solid;
+            height: 550px;
+            width: 530px;
+        }
+
+        .game1 button {
+            border-radius: 6px;
+            padding: 7px 9px;
+            background-color: #000000;
+            color: #ffffff;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003791;
+            color: #ffffff;
+        }
+
+        .game2 {
+            position: relative;
+            border: 1px solid #ffffff;
+            border-radius: 6px;
+            width: 550px;
+            padding: 10px 10px;
+            left: 940px;
+            top: -1110px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .rdr2logo {
+            border: 0px solid;
+            height: 550px;
+            width: 530px;
+        }
+
+        .game2 button {
+            border-radius: 6px;
+            padding: 7px 9px;
+            background-color: #000000;
+            color: #ffffff;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003791;
+            color: #ffffff;
+        }
+
+        .game3 {
+            position: relative;
+            border: 1px solid #ffffff;
+            border-radius: 6px;
+            background-color: #ffffff;
+            width: 550px;
+            padding: 10px 10px;
+            left: 80px;
+            color: #000000;
+            top: -1050px;
+        }
+
+        .gotlogo {
+            border: 0px solid;
+            height: 550px;
+            width: 530px;
+        }
+
+        .game3 button {
+            border-radius: 6px;
+            padding: 7px 9px;
+            background-color: #000000;
+            color: #ffffff;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003791;
+            color: #ffffff;
+        }
+
+        .game4 {
+            position: relative;
+            border: 1px solid #ffffff;
+            border-radius: 6px;
+            background-color: #ffffff;
+            width: 550px;
+            padding: 10px 10px;
+            left: 80px;
+            color: #000000;
+            top: -1980px;
+            left: 940px;
+        }
+
+        .tlou2logo {
+            border: 0px solid;
+            height: 550px;
+            width: 530px;
+        }
+
+        .game4 button {
+            border-radius: 6px;
+            padding: 7px 9px;
+            background-color: #000000;
+            color: #ffffff;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003791;
+            color: #ffffff;
+        }
+
+        .contact {
+            position: relative;
+            top: -1920px;
+        }
+
+        .contact h1 {
+            padding: 25px 40px;
+            text-align: center;
+            background-color: #003791;
+            color: #ffffff;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            letter-spacing: 5px;
+        }
+
+        .contact h1:hover {
+            color: #000000;
+        }
+
+        .contactlogo .fb, .ig, .twitter {
+            border: 1px solid #003791;
+            padding: 5px;
+            height: 45px;
+            width: 45px;
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+            margin-right: auto;
+        }
+
+        .contactlogo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 16%;
+            background: #003791;
+        }
+
+        .contactlogo h2 {
+            color: #ffffff;
+            cursor: pointer;
+            letter-spacing: 3px;
+            transition: all 0.3s ease 0s;
+        }
+
+        .contactlogo h2:hover {
+            color: #000000;
+        }
+
+        .educational {
+            color: #ffffff;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #003791;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            opacity: 0.7;
+        }
+
+        #myBtn:hover {
+            color: #000000; /* Add a dark-grey background on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../TSA3/images/pslogo.png" alt="logo" class="logo" width="30px" height="30px">
+            <nav>
+                <ul class="navlinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <div class="banner">
+                <video src="../TSA3/images/ps.mp4" class="psbanner" autoplay muted loop></video>
+                <h1 class="banner-heading">Play Has No Limits.</h1>
+            </div>
+        </section>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+        <div class="description">
+            <h1>About Sony Interactive Entertainment</h1>
+            <p>Recognized as a global leader in interactive and digital entertainment, Sony Interactive Entertainment (SIE) is <br> responsible for the PlayStation® brand and family of products and services. PlayStation has delivered innovation to <br> the market since the launch of the original PlayStation in Japan in 1994. <br> <br>
+                The PlayStation family of products and services include PlayStation®5, PlayStation®4, PlayStation®VR, <br> PlayStation™Store, PlayStation®Plus, PlayStation™Now, and acclaimed PlayStation software titles from PlayStation <br> Studios. <br> <br>                
+                Headquartered in San Mateo, California, SIE is a wholly-owned subsidiary of Sony Group Corporation and has global <br> functions in California, London, and Tokyo.</p> <br>
+        </div>
+
+        <div class="games">
+            <h1>Games</h1>
+        </div>
+
+        <div class="game1">
+            <img src="images/godofwarlogo.jfif" alt="God of War" class="gowlogo">
+            <h2>God of War</h2> <br>
+            <h3>Game Overview:</h3>
+            <p>Kratos is a father again. As mentor and protector to Atreus, a son determined to earn <br> his respect, he is forced to deal with and control the rage that has long defined him <br> while out in a very dangerous world with his son. <br> <br>
+                His vengeance against the Gods of Olympus behind him, Kratos now lives in the realm <br> of Norse deities and monsters. <br> <br>                
+                It’s in this harsh, unforgiving world that he must fight to survive, and not only teach his <br> son to do the same… but also prevent him from repeating the Ghost of Sparta’s <br> bloodstained mistakes. <br> <br>                
+                This staggering reimagining of God of War combines all the hallmarks of the iconic <br> series – brutal combat, epic boss fights, and breathtaking scale – and fuses them with <br> a powerful and moving narrative that re-establishes Kratos’ world.
+            </p> <br>
+            <h4>$59.99</h4>
+            <button class="button" type="button">Buy Now!</button>
+        </div>
+
+        <div class="game2">
+            <img src="images/rdr2logo.jpg" alt="Red Dead Redemption 2" class="rdr2logo">
+            <h2>Red Dead Redemption 2</h2> <br>
+            <h3>Game Overview:</h3>
+            <p>America, 1899. The end of the wild west era has begun as lawmen hunt down the last <br> remaining outlaw gangs. Those who will not surrender or succumb are killed. <br> <br>
+                After a robbery goes badly wrong in the western town of Blackwater, Arthur Morgan <br> and the Van der Linde gang are forced to flee. With federal agents and the best bounty <br> hunters in the nation massing on their heels, the gang must rob, steal and fight their <br> way across the rugged heartland of America in order to survive. <br> <br>              
+                As deepening internal divisions threaten to tear the gang apart, Arthur must make a <br> choice between his own ideals and loyalty to the gang who raised him. <br> <br>                
+                From the creators of Grand Theft Auto V and Red Dead Redemption, Red Dead <br> Redemption 2 is a sprawling tale of life in America at the dawn of the modern age.
+            </p> <br>
+            <h4>$59.99</h4>
+            <button class="button" type="button">Buy Now!</button>
+        </div>
+
+        <div class="game3">
+            <img src="images/gotlogo.jfif" alt="Ghost of Tsushima" class="gotlogo">
+            <h2>Ghost of Tsushima</h2> <br>
+            <h3>Game Overview:</h3>
+            <p>Uncover the hidden wonders of Tsushima in this open-world action adventure from <br> Sucker Punch Productions and PlayStation Studios, available for PS5 and PS4. <br> <br>
+                Forge a new path and wage an unconventional war for the freedom of Tsushima. <br> Challenge opponents with your katana, master the bow to eliminate distant threats, <br> develop stealth tactics to ambush enemies and explore a new story on Iki Island.
+            </p> <br>
+            <h4>$59.99</h4>
+            <button class="button" type="button">Buy Now!</button>
+        </div>
+
+        <div class="game4">
+            <img src="images/tlou2logo.jfif" alt="Ghost of Tsushima" class="tlou2logo">
+            <h2>The Last of Us Part 2</h2> <br>
+            <h3>Game Overview:</h3>
+            <p>Five years after their dangerous journey across the post-pandemic United States, Ellie <br> and Joel have settled down in Jackson, Wyoming. Living amongst a thriving community <br> of survivors has allowed them peace and stability, despite the constant threat of the <br> infected and other, more desperate survivors. <br> <br>
+                When a violent event disrupts that peace, Ellie embarks on a relentless journey to carry <br> out justice and find closure. As she hunts those responsible one by one, she is <br> confronted with the devastating physical and emotional repercussions of her actions.
+            </p> <br>
+            <h4>$59.99</h4>
+            <button class="button" type="button">Buy Now!</button>
+        </div>
+
+        <footer>
+            <div class="contact">
+                <h1>Contact Us</h1>
+                <hr color="black">
+                <div class="contactlogo">
+                    <a href="https://www.facebook.com/playstation/"><img src="images/fblogo.jpg" alt="Facebook" class="fb"></a>
+                    <a href="https://www.facebook.com/playstation/"><h2>Facebook</h2></a>
+                    <a href="https://twitter.com/PlayStation/"><img src="images/twitterlogo.png" alt="Twitter" class="twitter"></a>
+                    <a href="https://twitter.com/PlayStation/"><h2>Twitter</h2></a>
+                    <a href="https://www.instagram.com/playstation/"><img src="images/iglogo.png" alt="Instagram" class="ig"></a>
+                    <a href="https://www.instagram.com/playstation/"><h2>Instagram</h2></a>
+                </div>
+                <hr color="black">
+                <marquee> 
+                    <div align="center" class="educational" color="white">
+                        <h4>Created By: Cabelin, Reichester B. | For Educational Purposes Only | &copy;</h4>
+                    </div>
+                </marquee>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
